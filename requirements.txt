@@ -1,0 +1,11 @@
+# FICSY — Dependencies
+# Install: pip install -r requirements.txt
+
+# CLI UI
+rich>=13.7.0
+
+# AI Categorization (Gemini)
+google-generativeai>=0.7.0
+
+# Environment variables (.env file)
+python-dotenv>=1.0.0
