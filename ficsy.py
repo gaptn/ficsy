@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-FICSY — Financial Literacy CLI for High School Students
+FICSY — Financial Literacy for High School Students
 
 Jalankan: python ficsy.py
 """
@@ -272,6 +272,14 @@ def main() -> None:
 
     if _check_first_run():
         _handle_first_run()
+
+    # Tampilkan banner selamat datang (jika tersedia)
+    try:
+        from ui.dashboard import render_welcome
+        render_welcome()
+    except Exception:
+        # Jika import gagal (mis. jalankan dari environment berbeda), lanjutkan saja
+        pass
 
     _run_menu_loop()
 
