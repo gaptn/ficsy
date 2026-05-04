@@ -524,8 +524,7 @@ def render_success(message: str) -> None:
 
 def render_welcome() -> None:
     """Banner selamat datang untuk pertama kali membuka FICSY."""
-    banner = f"""
-[bold cyan]
+    banner = f[bold cyan]
   ███████╗██╗ ██████╗███████╗██╗   ██╗
   ██╔════╝██║██╔════╝██╔════╝╚██╗ ██╔╝
   █████╗  ██║██║     ███████╗ ╚████╔╝ 
@@ -535,7 +534,7 @@ def render_welcome() -> None:
 [/bold cyan]
 [dim]  Financial Literacy CLI for High School Students[/dim]
 [{C_MUTED}]  v{APP_VERSION}[/]
-"""
+
     console.print(Panel(banner, border_style=C_BRAND, padding=(0, 4)))
     console.print()
     console.print(f"  [{C_MUTED}]Jalankan[/] [bold]ficsy setup[/] [{C_MUTED}]untuk mulai mengatur profil keuangan.[/]")
