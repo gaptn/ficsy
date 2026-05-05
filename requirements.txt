@@ -5,7 +5,7 @@
 rich>=13.7.0
 
 # AI Categorization (Gemini)
-google-geneai>=0.7.0
+google-genai>=0.7.0
 
 # Environment variables (.env file)
 python-dotenv>=1.0.0
