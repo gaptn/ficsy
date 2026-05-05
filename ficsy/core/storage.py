@@ -78,3 +78,10 @@ def storage_backup() -> str:
     bak = cfg.DATA_PATH.replace(".json", f"_{ts}.bak.json")
     shutil.copy2(cfg.DATA_PATH, bak)
     return bak
+
+
+# Alias untuk kompatibilitas
+load          = storage_load
+save          = storage_save
+file_exists   = storage_file_exists
+init_if_empty = storage_init_if_empty

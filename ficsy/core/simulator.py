@@ -117,3 +117,9 @@ def get_simulation_history(limit: int = 10) -> list:
     data = storage_load()
     sims = sorted(data.get("simulations", []), key=lambda x: x.get("date",""), reverse=True)
     return sims[:limit] if limit else sims
+
+
+def get_preset_by_id(preset_id: int) -> dict:
+    if 1 <= preset_id <= len(PRESET_SCENARIOS):
+        return PRESET_SCENARIOS[preset_id - 1]
+    raise ValueError(f"Preset ID {preset_id} tidak valid.")

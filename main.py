@@ -37,7 +37,7 @@ def _check_dependencies() -> None:
 
 
 def _check_first_run() -> bool:
-    from core.storage import file_exists
+    from core.storage import storage_file_exists as file_exists
     return not file_exists()
 
 
